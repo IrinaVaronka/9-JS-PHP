@@ -1,7 +1,5 @@
 import './App.scss';
-import Metas from '../Components/react-base/props-02';
-
-
+import Labas from '../Components/react-base/labas-01';
 
 
 function App () {
@@ -13,7 +11,7 @@ function App () {
     <div className='App'>
       <header className='App-header'>
 
-       <Metas number = '2023'/>
+        <Labas />
 
       </header>
     </div>
