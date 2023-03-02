@@ -69,13 +69,7 @@ const numbers = [...Array(3)].map(_ => rand(1, 7));
 let sortNumbers = console.log(numbers.sort());
 
 
-console.log('-------2.1-------');
-/*
-Vyksta automobilių žiedinės lenktynės. Automobiliui Nr. 55 liko nuvažiuoti 10 ratų. 
-Suprogramuokite for ciklą, kuris imituotų 10 ratų automobilio važiavimą ir kiekviename cikle 
-pateiktų (atspausdintų) kiek ratų dar liko automobiliui nuvažiuoti. Paskutinis skaičius turėtų būti 1. 
-Visas rezultatas turėtų būti toks:  10 9 8 7 6 5 4 3 2 1 (skaičiai gali būti atspausdinti stulpeliu).
-*/
+
 
 
 
