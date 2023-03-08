@@ -1,4 +1,7 @@
 <?php
+session_start();
+
+setcookie('animal', 'RACOON', time() - 3600 * 10);
 
 echo '<pre>';
 //POST
@@ -6,9 +9,9 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         // kazka padarom
 
-        echo '<pre>';
-        print_r($_POST);
-        die;
+        $_SESSION['animal'] = $_POST['animal'];
+        $_SESSION['magic_number'] = $_POST['magic_number']; //po die ne mirsta
+
 
         header('location: http://localhost/9-JS-PHP/013/');  //redirect
         die; // script done work
@@ -16,9 +19,9 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 }
 
 //GET scenarijus
-
-
-
+$animal = $_SESSION['animal'] ?? '';
+$mn = $_SESSION['magic_number'] ?? '';
+unset($_SESSION['animal'], $_SESSION['magic_number'])
 
 ?>
 
@@ -34,6 +37,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 <body>
     <h1>013</h1>
+    <h2><?=$animal ?> <?=$mn ?></h2>
     <form action="" method="post">
         <input type="text" name="animal">
         <br>
