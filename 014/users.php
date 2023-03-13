@@ -32,7 +32,7 @@ elseif($sort == 'id_desc') {
 </head>
 <body>
 
-    <?php require __DIR__ . 'menu.php' ?>
+    <?php require __DIR__ . '/menu.php' ?>
 
     <form action="" method="get">
         <fieldset>
@@ -50,6 +50,8 @@ elseif($sort == 'id_desc') {
 <?php foreach($users as $user) :  ?>
 <li>
     <b>ID: </b> <?= $user['user_id'] ?> <i><?= $user['name'] ?> <?= $user['surname'] ?> </i>
+    <a href="?id=$user['user_id'] ?>"????
+
     <form action "http://localhost/9-JS-PHP/014/delete.php ?id=<?['user_id'] ?>" method = "post">
         <button type="submit">delete</button>
 </form>

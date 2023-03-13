@@ -2,7 +2,9 @@
 
 echo '<h1>F1 START</h1>';
 
-//function a() {}
+// function a(){}
+
+
 
 
 echo '<h1>F1 END</h1>';
