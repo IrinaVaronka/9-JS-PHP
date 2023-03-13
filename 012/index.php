@@ -1,22 +1,22 @@
 
 <?php
 
+
+//передача данных из переменных вне функции в функцию:
+
 $animal = 'bebras';
 
 $animal2 = 'barsuk';
 
-function go(&$a) //$a - parametras
+function go(&$a) //$a - создаем переменную. Присваивание через референс. & - ссылка.
 {
-    //global $animal; //плохой пример
-
-    $hello = 'LABUKAS';
-    //echo $animal;
+    
     $a = 'dramblys';
 
     echo $a;
 }
 
-go($animal2); // argumentas
+go($animal2); // вызов функции
 
 echo $animal2;
 

@@ -5,7 +5,8 @@ setcookie('animal', 'RACOON', time() - 3600 * 10);
 
 echo '<pre>';
 //POST
-if($_SERVER['REQUEST_METHOD'] == 'POST') {
+if($_SERVER['REQUEST_METHOD'] == 'POST') {   // $_SERVER - массив PHP. В браузере видим в массиве метод, который использовался. 
+                                                            
 
         // kazka padarom
 
@@ -13,7 +14,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
         $_SESSION['magic_number'] = $_POST['magic_number']; //po die ne mirsta
 
 
-        header('location: http://localhost/9-JS-PHP/013/');  //redirect
+        header('Location: http://localhost/9-JS-PHP/013/');  //redirect
         die; // script done work
 
 }
@@ -22,6 +23,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 $animal = $_SESSION['animal'] ?? '';
 $mn = $_SESSION['magic_number'] ?? '';
 unset($_SESSION['animal'], $_SESSION['magic_number'])
+
+
 
 ?>
 
@@ -37,7 +40,7 @@ unset($_SESSION['animal'], $_SESSION['magic_number'])
 
 <body>
     <h1>013</h1>
-    <h2><?=$animal ?> <?=$mn ?></h2>
+    <h2><?=$animal ?> <?=$mn ?></h2> 
     <form action="" method="post">
         <input type="text" name="animal">
         <br>
@@ -48,3 +51,4 @@ unset($_SESSION['animal'], $_SESSION['magic_number'])
 </body>
 
 </html>
+
