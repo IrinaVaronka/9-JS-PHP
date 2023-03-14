@@ -20,9 +20,9 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {   // $_SERVER - массив PHP. В 
 }
 
 //GET scenarijus
-$animal = $_SESSION['animal'] ?? '';
+$animal = $_SESSION['animal'] ?? '';     //создаем переменные, если первый раз на странице, и animal нет, после ?? идет пустой массив
 $mn = $_SESSION['magic_number'] ?? '';
-unset($_SESSION['animal'], $_SESSION['magic_number'])
+unset($_SESSION['animal'], $_SESSION['magic_number'])    // после рефреша данные не остаются
 
 
 
